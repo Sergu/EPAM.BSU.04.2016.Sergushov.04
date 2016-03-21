@@ -11,7 +11,7 @@ namespace Courses
     {
         public readonly string teacherName;
         public readonly Repository repository;
-        private List<ICourse> currentCourses;
+        private List<ICourseForTeacher> currentCourses = new List<ICourseForTeacher>();
         public Teacher(string name, Repository repository)
         {
             this.teacherName = name;
@@ -19,7 +19,7 @@ namespace Courses
         }
         public void AddCourse(string courseName)
         {
-
+            
 
         }
     }

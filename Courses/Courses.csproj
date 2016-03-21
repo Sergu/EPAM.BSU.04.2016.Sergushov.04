@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Course.cs" />
     <Compile Include="Interfaces\ICourse.cs" />
+    <Compile Include="Interfaces\ICourseForTeacher.cs" />
     <Compile Include="Interfaces\INotifier.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IRepositoryForStudent.cs" />

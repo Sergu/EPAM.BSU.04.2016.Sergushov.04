@@ -10,5 +10,7 @@ namespace Courses.Interfaces
     {
         readonly string studentName;
         void Update(List<ICourse> requestCourses, List<ICourse> currentCourses, Dictionary<ICourse, double> markedCourses);
+        void Update(List<ICourse> requestCourses, List<ICourse> currentCourses);
+        void Update(List<ICourse> currentCourses, Dictionary<ICourse, double> markedCourses);
     }
 }
