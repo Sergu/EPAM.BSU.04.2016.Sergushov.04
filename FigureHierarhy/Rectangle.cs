@@ -8,19 +8,17 @@ namespace FigureHierarhy
 {
     public class Rectangle : Square
     {
-
         public Rectangle(List<sPoint> points) : base(points)
         {
 
         }
         public override double CalculateArea()
         {
-            double diagonal = 2 * CalculatePointDistance();
-            return diagonal * diagonal/2;
+            return (this.points[0].x - this.points[1].x) * (this.points[0].y - this.points[1].y);
         }
         public override double CalculatePerimeter()
         {
-            return 4 * Math.Sqrt(2) * CalculatePointDistance();
+            return 2 * ((this.points[0].x - this.points[1].x) + (this.points[0].y - this.points[1].y));
         }
         public override string ToString()
         {
