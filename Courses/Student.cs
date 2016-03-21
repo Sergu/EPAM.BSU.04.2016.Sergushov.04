@@ -9,8 +9,8 @@ namespace Courses
 {
     public class Student : IStudent
     {
-        public readonly string studentName;
-        public readonly IRepositoryForStudent repository;
+        public string studentName { get; private set; }
+        public IRepositoryForStudent repository { get; private set; }
         public List<ICourse> newCourses {get;private set;}
         public List<ICourse> currentCourses {get;private set;}
         public Dictionary<ICourse, double> markedCourses {get;private set;}

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Courses.Interfaces
 {
-    interface ICourse
+    public interface ICourse
     {
-        readonly string courseName;
-        readonly ITeacher teacher;
+        string courseName { get; }
+        ITeacher teacher { get; }
     }
 }

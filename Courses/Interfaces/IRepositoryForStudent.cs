@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Courses.Interfaces
 {
-    interface IRepositoryForStudent
+    public interface IRepositoryForStudent
     {
         bool AcceptStudentOnCourse(IStudent student, ICourse selectedCourse);
     }

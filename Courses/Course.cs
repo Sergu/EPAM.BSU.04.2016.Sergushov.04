@@ -9,8 +9,8 @@ namespace Courses
 {
     public class Course : ICourse , ICourseForTeacher,IEquatable<Course>
     {
-        public readonly string courseName;
-        public readonly ITeacher teacher;
+        public string courseName { get; private set; }
+        public ITeacher teacher { get; private set; }
         public List<IStudent> students { get; private set; }
         public Dictionary<IStudent, double> markedStudents { get; private set; }
         private bool isFinished = false;

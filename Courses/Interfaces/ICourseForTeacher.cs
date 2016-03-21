@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Courses.Interfaces
 {
-    interface ICourseForTeacher
+    public interface ICourseForTeacher
     {
-        readonly string courseName;
-        List<IStudent> students;
-        Dictionary<IStudent, double> markedStudents;
+        string courseName { get; }
+        List<IStudent> students { get; }
+        Dictionary<IStudent, double> markedStudents { get; }
     }
 }

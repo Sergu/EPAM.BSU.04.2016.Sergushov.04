@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Courses.Interfaces
 {
-    interface ITeacher
+    public interface ITeacher
     {
-        readonly string teacherName;
-        void UpdateOnAcceptToCourse(List<ICourseForTeacher> currentCourses);
+        string teacherName { get; }
     }
 }

@@ -9,8 +9,8 @@ namespace Courses
 {
     public class Teacher : ITeacher
     {
-        public readonly string teacherName;
-        public readonly IRepositoryForTeacher repository;
+        public string teacherName { get; private set; }
+        public IRepositoryForTeacher repository { get; private set; }
         private List<ICourseForTeacher> currentCourses = new List<ICourseForTeacher>();
         public Teacher(string name, IRepositoryForTeacher repository)
         {

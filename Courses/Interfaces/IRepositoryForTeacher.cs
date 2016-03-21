@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Courses.Interfaces
 {
-    interface IRepositoryForTeacher
+    public interface IRepositoryForTeacher
     {
         bool CreateCourse(string courseName, ITeacher teacher);
         bool FinishCourse(ICourseForTeacher course);
