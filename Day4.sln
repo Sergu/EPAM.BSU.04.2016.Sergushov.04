@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses", "Courses\Courses.csproj", "{DB0E1EA6-E699-4C69-A5DD-A7F6B05EE94D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureHierarhy", "FigureHierarhy\FigureHierarhy.csproj", "{41969F6A-8D15-492B-9B9D-D26282646308}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DB0E1EA6-E699-4C69-A5DD-A7F6B05EE94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB0E1EA6-E699-4C69-A5DD-A7F6B05EE94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB0E1EA6-E699-4C69-A5DD-A7F6B05EE94D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41969F6A-8D15-492B-9B9D-D26282646308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41969F6A-8D15-492B-9B9D-D26282646308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41969F6A-8D15-492B-9B9D-D26282646308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41969F6A-8D15-492B-9B9D-D26282646308}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
