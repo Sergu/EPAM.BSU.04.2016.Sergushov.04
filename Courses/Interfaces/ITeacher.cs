@@ -9,6 +9,6 @@ namespace Courses.Interfaces
     interface ITeacher
     {
         readonly string teacherName;
-        void Update(List<ICourseForTeacher> currentCourses);
+        void UpdateOnAcceptToCourse(List<ICourseForTeacher> currentCourses);
     }
 }

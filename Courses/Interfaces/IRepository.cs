@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Courses.Interfaces
 {
-    interface IRepository
+    interface IRepository : IRepositoryForStudent,IRepositoryForTeacher
     {
     }
 }

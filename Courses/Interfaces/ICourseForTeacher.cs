@@ -8,8 +8,8 @@ namespace Courses.Interfaces
 {
     interface ICourseForTeacher
     {
-        List<IStudent> selectedStudents;
-        List<IStudent> requestedStudents;
+        readonly string courseName;
+        List<IStudent> students;
         Dictionary<IStudent, double> markedStudents;
     }
 }

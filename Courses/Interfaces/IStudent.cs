@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Courses.Interfaces
 {
-    interface IStudent
+    interface IStudent : IEquatable<IStudent>
     {
         readonly string studentName;
-        void Update(List<ICourse> requestCourses, List<ICourse> currentCourses, Dictionary<ICourse, double> markedCourses);
-        void Update(List<ICourse> requestCourses, List<ICourse> currentCourses);
-        void Update(List<ICourse> currentCourses, Dictionary<ICourse, double> markedCourses);
+        void UpdateOnAcceptToCourse(List<ICourse> newCourses, List<ICourse> currentCourses);
+        void UpdateOnFinishCourse(List<ICourse> currentCourses, Dictionary<ICourse, double> markedCourses);
+        void UpdateOnCourseCreated(List<ICourse> newCourses);
     }
 }

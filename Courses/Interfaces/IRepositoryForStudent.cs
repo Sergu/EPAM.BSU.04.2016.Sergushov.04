@@ -8,6 +8,6 @@ namespace Courses.Interfaces
 {
     interface IRepositoryForStudent
     {
-        void MakeRequestOnCourse(IStudent student, ICourse course);
+        bool AcceptStudentOnCourse(IStudent student, ICourse selectedCourse);
     }
 }

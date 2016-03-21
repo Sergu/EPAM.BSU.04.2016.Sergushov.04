@@ -7,34 +7,17 @@ using Courses.Interfaces;
 
 namespace Courses
 {
-    public class Course : ICourse , ICourseForTeacher
+    public class Course : ICourse , ICourseForTeacher,IEquatable<Course>
     {
         public readonly string courseName;
         public readonly ITeacher teacher;
-        public List<IStudent> selectedStudents { get; private set; }
-        public List<IStudent> requestedStudents { get; private set; }
+        public List<IStudent> students { get; private set; }
         public Dictionary<IStudent, double> markedStudents { get; private set; }
         private bool isFinished = false;
-        private Repository repository;
-        public Course(string name, Teacher teacher, Repository repository)
+        public Course(string name, ITeacher teacher)
         {
             this.courseName = name;
-            this.teacher = teacher;
-            this.repository = repository;
-            
-        }
-        public bool LeaveRequest(IStudent NewStudent)
-        {
-            foreach (Student student in selectedStudents)
-            {
-                if (student.Equals(NewStudent))
-                {
-                    Notify();
-                    requestedStudents.Add(NewStudent);
-                }
-            }
-            selectedStudents.Add(NewStudent);
-            return true;
+            this.teacher = teacher;            
         }
         public bool Equals(Course other)
         {

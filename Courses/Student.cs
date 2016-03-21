@@ -10,16 +10,42 @@ namespace Courses
     public class Student : IStudent
     {
         public readonly string studentName;
-        public readonly Repository repository;
-        private List<ICourse> requestCourses;
-        private List<ICourse> currentCourses;
-        private Dictionary<ICourse, double> markedCourses;
-        public Student(string name, Repository repository)
+        public readonly IRepositoryForStudent repository;
+        public List<ICourse> newCourses {get;private set;}
+        public List<ICourse> currentCourses {get;private set;}
+        public Dictionary<ICourse, double> markedCourses {get;private set;}
+        public Student(string name, IRepositoryForStudent repository)
         {
             this.studentName = name;
             this.repository = repository;
+            this.newCourses = new List<ICourse>();
+            this.currentCourses = new List<ICourse>();
+            this.markedCourses = new Dictionary<ICourse,double>();
         }
-        public bool Equals(Student other)
+        public bool MakeRequestOnCourse(ICourse course)
+        {
+            if (newCourses.Contains(course))
+            {
+                return repository.AcceptStudentOnCourse((IStudent)this, course);
+            }
+            return false;
+        }
+        public void UpdateOnAcceptToCourse(List<ICourse> newCourses, List<ICourse> currentCourses)
+        {
+            this.newCourses = newCourses;
+            this.currentCourses = currentCourses;
+        }
+        public void UpdateOnFinishCourse(List<ICourse> currentCourses, Dictionary<ICourse, double> markedCourses)
+        {
+            this.currentCourses = currentCourses;
+            this.markedCourses = markedCourses;
+        }
+        public void UpdateOnCourseCreated(List<ICourse> newCourses)
+        {
+            this.newCourses = newCourses;
+        }
+
+        public bool Equals(IStudent other)
         {
             if (other == null)
             {

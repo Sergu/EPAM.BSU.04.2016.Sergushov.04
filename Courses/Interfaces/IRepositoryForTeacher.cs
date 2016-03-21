@@ -9,8 +9,7 @@ namespace Courses.Interfaces
     interface IRepositoryForTeacher
     {
         bool CreateCourse(string courseName, ITeacher teacher);
-        bool FinishCourse(ICourse course);
-        bool EstimateStudent(ICourse course, IStudent student, ITeacher teacher);
-        bool EcceptStudentOnCourse(ICourse course, IStudent student, ITeacher teacher);
+        bool FinishCourse(ICourseForTeacher course);
+        bool EstimateStudent(ICourseForTeacher course, IStudent student, ITeacher teacher,double mark);
     }
 }
