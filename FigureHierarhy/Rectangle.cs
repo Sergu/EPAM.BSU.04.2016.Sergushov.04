@@ -22,7 +22,7 @@ namespace FigureHierarhy
         }
         public override string ToString()
         {
-            return string.Format("{0} :  sides: {1}, {2} perimeter: {3},area: {4}", this.GetType().Name, this.points[0].x, this.points[0].y, this.CalculatePointDistance() / 2 * Math.Sqrt(2), CalculatePerimeter(), CalculateArea());
+            return string.Format("{0} :  sides: {1}, {2} perimeter: {3},area: {4}", this.GetType().Name, Math.Abs(this.points[0].x - this.points[1].x), Math.Abs(this.points[0].y - this.points[1].y), this.CalculatePerimeter(), CalculateArea());
         }
     }
 }

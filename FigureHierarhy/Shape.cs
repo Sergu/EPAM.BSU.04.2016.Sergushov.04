@@ -20,7 +20,14 @@ namespace FigureHierarhy
     }
     public abstract class Shape
     {
-        protected List<sPoint> points;
+        public List<sPoint> points
+        {
+            get
+            {
+                return DeepCopy(points);
+            }
+            private set;
+        }
         virtual double CalculateArea();
         virtual double CalculatePerimeter();
         virtual string ToString()
